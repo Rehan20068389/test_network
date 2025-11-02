@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: rehan-2003
+spec:
+  type: LoadBalancer
+  selector:
+    app: rehan-2003
+  ports:
+    - port: 80
+      targetPort: 3001  
+

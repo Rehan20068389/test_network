@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rehan-2003
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: rehan-2003
+  template:
+    metadata:
+      labels:
+        app: rehan-2003
+    spec:
+      containers:
+      - name: rehan-2003
+        image: 223597091744.dkr.ecr.eu-north-1.amazonaws.com/rehan_2003:latest
+        ports:
+        - containerPort: 3001
